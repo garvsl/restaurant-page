@@ -34,19 +34,24 @@ setTimeout(() => {
     home.addEventListener('click', () => {
 
         if(home.style.color == 'white'){
+            if(menu.style.color != 'white' && menu.style.color != ''){
+                removal()
+            }
             menu.style.color = 'white'
             contact.style.color = 'white'
             home.style.color = 'rgba(255, 77, 77, 0.744)'
-            removal()
         }
     })
 
     contact.addEventListener('click', () => {
         if(contact.style.color == 'white' || contact.style.color == ''){
+            if(menu.style.color != 'white' && menu.style.color != ''){
+                removal()
+            }
             menu.style.color = 'white'
             home.style.color = 'white'
             contact.style.color = 'rgba(255, 77, 77, 0.744)'
-            removal()
+            
         }
     })
 
