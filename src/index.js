@@ -1,5 +1,6 @@
 import { indexPage } from "./first.js";
-
+import { menuPage } from "./second.js";
+import { removal } from "./removeSecond.js";
 
 
 
@@ -12,34 +13,41 @@ setTimeout(() => {
     cover.style.opacity = 0;
     indexPage()
 
-    // const content = document.getElementById('content')
-
-    // const header = document.getElementsByTagName('header')
-    // const body = document.querySelector('.body')
-    // const background = document.querySelector('.background')
 
     const home = document.querySelector('.home')
 
     const menu = document.querySelector('.menu')
 
     const contact = document.querySelector('.contact')
-    
+
     menu.addEventListener('click', () => {
-        home.style.color = 'white'
-        contact.style.color = 'white'
-        menu.style.color = 'rgba(255, 77, 77, 0.744)'
+                
+        if(menu.style.color == 'white' || menu.style.color == ''){
+            home.style.color = 'white'
+            contact.style.color = 'white'
+            menu.style.color = 'rgba(255, 77, 77, 0.744)'
+            menuPage()
+            
+        }
     })
 
     home.addEventListener('click', () => {
-        menu.style.color = 'white'
-        contact.style.color = 'white'
-        home.style.color = 'rgba(255, 77, 77, 0.744)'
+
+        if(home.style.color == 'white'){
+            menu.style.color = 'white'
+            contact.style.color = 'white'
+            home.style.color = 'rgba(255, 77, 77, 0.744)'
+            removal()
+        }
     })
 
     contact.addEventListener('click', () => {
-        menu.style.color = 'white'
-        home.style.color = 'white'
-        contact.style.color = 'rgba(255, 77, 77, 0.744)'
+        if(contact.style.color == 'white' || contact.style.color == ''){
+            menu.style.color = 'white'
+            home.style.color = 'white'
+            contact.style.color = 'rgba(255, 77, 77, 0.744)'
+            removal()
+        }
     })
 
     setTimeout(() => {
